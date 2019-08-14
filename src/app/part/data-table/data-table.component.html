@@ -1,0 +1,41 @@
+<br>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="fa fa-filter"></i>></span>
+    </div>
+    <input type="text" class="form-control" placeholder="filter" [(ngModel)]="phraseString">
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>{{ cols[0].text }}</th>
+            <th>{{ cols[1].text }}</th>
+            <th>{{ cols[2].text }}</th>
+            <th>{{ cols[3].text }}</th>
+            <th>{{ cols[4].text }}</th>
+            <th>{{ cols[5].text }}</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of list | objectArray:phraseString">
+            <td *ngFor="let col of cols">
+                <app-data-cell [cellValue]="row[col.key]" [col]="col"></app-data-cell>
+            </td>
+            <td>
+                <div class="btn-group">
+                    <button class="btn btn-info" (click)="onUpdate()"> 
+                        <i class="fa fa-pencil"></i>
+                    </button>
+                    <button class="btn btn-danger" (click)="onDelete('Delete')">
+                            <i [class]="deleteIconClass"></i>
+                    </button>
+                    <button class="btn btn-danger" (click)="onTest()">
+                        <i [class]="deleteIconClass"></i>
+                </button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
