@@ -1,5 +1,5 @@
 <app-menu></app-menu>
 <div class="container">
-  <app-data-table [list]="driver" [cols]="cols"></app-data-table>
+  <app-data-table [list]="driver" [cols]="cols" (create)="onCreate($event)"></app-data-table>
 </div>
 

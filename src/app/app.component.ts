@@ -33,4 +33,9 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.listSubscription.unsubscribe();
   }
+
+  onCreate(row: any): void {
+    this.BaseService.create('drivers', row);
+  }
+  
 }

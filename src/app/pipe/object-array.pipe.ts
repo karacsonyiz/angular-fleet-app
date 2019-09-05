@@ -12,7 +12,14 @@ export class ObjectArrayPipe implements PipeTransform {
 
     phrase = phrase.toLocaleLowerCase();
     return value.filter( val => {
-      return false;
+      let isOk: boolean = false;
+      for (let k in val) {
+        let check = val[k].toString().toLowerCase();
+        if(check.indexOf(phrase) > -1) {
+          isOk = true;
+        }
+      }
+      return isOk;
     })
   }
 
