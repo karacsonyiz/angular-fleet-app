@@ -1,38 +1,70 @@
 {
-    "drivers": [{
+  "drivers": [
+    {
       "id": 1,
-      "name": "Philip Luck",
-      "email": "p@g.com",
-      "phone": "443579938",
-      "city": "LA",
-      "address": "3. Sugar street 71."
-    },{
+      "name": "John Doe",
+      "email": "john.doe@gmail.com",
+      "phone": 12354698745,
+      "city": "la",
+      "address": "My address"
+    },
+    {
       "id": 2,
       "name": "Jack Idol",
-      "email": "jack.idol@gmail.com",
-      "phone": "123543364",
-      "city": "LA",
-      "address": "7. Sugar street 333."
-    },{
+      "email": "idol@gmail.com",
+      "phone": 99999999999,
+      "city": "bp",
+      "address": "Rabbi str. 55."
+    },
+    {
       "id": 3,
-      "name": "Joe Firpo",
-      "email": "joe.firpo@gmail.com",
-      "phone": "887393572",
-      "city": "CA",
-      "address": "Stalin street 1."
-    }],
-    "vehicles": [{
+      "name": "Charlie Filpo",
+      "email": "cf@gmail.com",
+      "phone": 99999999999,
+      "city": "la",
+      "address": "Ulica. 44."
+    },
+    {
+      "name": "Malac Sándor",
+      "email": "ms@ms.hu",
+      "phone": "123152",
+      "city": "la",
+      "address": "Sajt. 44",
+      "id": 4
+    }
+  ],
+  "vehicles": [
+    {
       "id": 1,
       "lp": "GOD-258",
-      "year ": 2015,
+      "year": 2015,
       "manufacturer": "VW",
-      "consumption ": 7,
-      "engine ": "diesel"
-    }],
-    "fuelings": [{
+      "consumption": 7,
+      "engine": "diesel"
+    },
+    {
+      "lp": "HHP-887",
+      "year": "2002",
+      "manufacturer": "Volvo",
+      "consumption": "12",
+      "engine": "gasoline",
+      "id": 2
+    }
+  ],
+  "fuelings": [
+    {
       "id": 1,
-      "vehicle": 1,
-      "driver ": 1,
-      "amount ": 40,
-      "date": "2019-04-02"
-    }]}
+      "vehicleId": "1",
+      "driverId": "2",
+      "amount": 40,
+      "date": "2019-04-01"
+    },
+    {
+      "vehicleId": "2",
+      "driverId": "1",
+      "amount": "55",
+      "date": "2019-03-13",
+      "id": 3
+    }
+  ]
+}

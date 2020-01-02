@@ -8,29 +8,15 @@ import { Subscription } from 'rxjs';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit {
   title = 'fleet-manager';
-  driver: any = {};
-  cols: any = [];
-  listSubscription: Subscription;
 
-  constructor(
-    private BaseService: BaseService,
-    private configService: ConfigService
-  ){
-
+  constructor(){
   }
+  
 
   ngOnInit() {
-    this.cols = this.configService.cols.drivers
-    this.listSubscription = this.BaseService.getAll('drivers')
-    .subscribe(
-      list => this.driver = list,
-      err => console.error(err),
-      () => console.log('unsubscribed'));
   }
 
-  ngOnDestroy() {
-    this.listSubscription.unsubscribe();
-  }
+  
 }
