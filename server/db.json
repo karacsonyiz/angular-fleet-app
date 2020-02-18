@@ -23,14 +23,6 @@
       "phone": 99999999999,
       "city": "la",
       "address": "Ulica. 44."
-    },
-    {
-      "name": "Malac Sándor",
-      "email": "ms@ms.hu",
-      "phone": "123152",
-      "city": "la",
-      "address": "Sajt. 44",
-      "id": 4
     }
   ],
   "vehicles": [

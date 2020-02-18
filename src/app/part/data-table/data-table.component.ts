@@ -11,7 +11,6 @@ export class DataTableComponent implements OnInit {
   @Input() list: any[];
   @Input() cols: any[];
 
-
   @Output() create: EventEmitter<any> = new EventEmitter();
   @Output() update: EventEmitter<any> = new EventEmitter();
   @Output() delete: EventEmitter<any> = new EventEmitter();
@@ -37,7 +36,5 @@ export class DataTableComponent implements OnInit {
   onDelete(row): void {
     this.delete.emit(row)
   }
-
-  
 
 }

@@ -9,8 +9,8 @@ export class Base implements OnInit, OnDestroy {
     listSubscription: Subscription;
   
     constructor(
-      private BaseService: BaseService,
-      private configService: ConfigService,
+      protected BaseService: BaseService,
+      protected configService: ConfigService,
       public dataType: string
     ){
   
